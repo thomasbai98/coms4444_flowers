@@ -336,6 +336,8 @@ class Suitor(BaseSuitor):
         :param types: dictionary of flower types and their associated counts in the bouquet
         :return: A score representing preference of the flower types in the bouquet
         """
+        if types == {}:
+            return 0
         key = {0:0,1:0,2:0,3:0}
         score = 0
         for type in types:
